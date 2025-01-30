@@ -85,3 +85,17 @@ Loads and validates words from `wordlist.txt`.
 Custom exception for handling invalid input and game state errors.
 
 ---
+
+- Any adjustments to given files will be ignored.
+- Create an implementation of this interface to create a game that meets the specification above.
+- Please use PHP version >= 8.1 to complete your code.
+- Output is not important, so you can develop either for a web server with PHP, or for the PHP command-line interpreter.
+- Ideally your solution would not utilise any third party libraries apart from those used for running tests (see below).
+- Please include in your submission any tests that you write whilst building out your solution.
+- In the composer.json file we have provided autoload already, feel free to use a testing library for writing your unit or integration tests.
+- Your code should be production quality.
+
+#### 2. Review the code provided to you in the VocabularyCheckerImpl class.
+
+- Please do not rewrite the code.
+- Just add line comments to the file where you think the code could be improved along with your reasoning.
