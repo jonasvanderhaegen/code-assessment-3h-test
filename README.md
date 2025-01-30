@@ -1,3 +1,5 @@
+<p><img width="100%" src="Scherm­afbeelding 2025-01-30 om 17.49.33.png" alt="score"></p>
+
 # Multiplayer Word Guessing Game
 
 This project is a backend implementation for a multiplayer word guessing game. Players guess words to reveal hidden characters and earn points based on their guesses.
