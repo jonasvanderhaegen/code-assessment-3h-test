@@ -94,6 +94,7 @@ Custom exception for handling invalid input and game state errors.
 - Please include in your submission any tests that you write whilst building out your solution.
 - In the composer.json file we have provided autoload already, feel free to use a testing library for writing your unit or integration tests.
 - Your code should be production quality.
+- Submit your solution within 3 hours.
 
 #### 2. Review the code provided to you in the VocabularyCheckerImpl class.
 
