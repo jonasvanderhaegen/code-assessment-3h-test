@@ -1,30 +1,38 @@
 <?php
 
+// Interface for checking the existence of words in a vocabulary
 interface VocabularyChecker {
+    // Method to check if a word exists in the vocabulary
     function exists(string $word): bool;
 }
 
+// Implementation of the VocabularyChecker interface
 class VocabularyCheckerImpl implements VocabularyChecker {
+    // Array to hold valid words
     private array $validWords = [];
 
+    // Constructor to load words from a file into the validWords array
     public function __construct() {
         try {
+            // Attempt to open the wordlist file
             $handle = fopen(__DIR__ . '/wordlist.txt', 'r', false);
             if ($handle !== false) {
+                // Read each line from the file and add it to the validWords array
                 while (($line = fgets($handle)) !== false) {
-                    $this->validWords[] = trim($line);
+                    $this->validWords[] = trim($line); // Trim whitespace
                 }
-                fclose($handle);
+                fclose($handle); // Close the file handle
             } else {
-                throw new Exception("Failed to open wordlist.txt");
+                throw new Exception("Failed to open wordlist.txt"); // Handle file open error
             }
         } catch (Exception $e) {
-            echo $e->getMessage();
+            echo $e->getMessage(); // Output error message if an exception occurs
         }
     }
 
+    // Method to check if a word exists in the validWords array
     public function exists(string $word): bool {
-        return in_array($word, $this->validWords);
+        return in_array($word, $this->validWords); // Return true if the word is found
     }
 }
 
